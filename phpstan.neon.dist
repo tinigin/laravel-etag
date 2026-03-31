@@ -1,0 +1,22 @@
+includes:
+    - phpstan-baseline.neon
+    - ./vendor/larastan/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - src
+        - tests
+        - config
+
+    # The level 9 is the highest level
+    level: 9
+
+    ignoreErrors:
+        - identifier: missingType.iterableValue
+        - identifier: larastan.noEnvCallsOutsideOfConfig
+
+    excludePaths:
+        - ./*/*/FileToBeExcluded.php
+
+    checkOctaneCompatibility: true

@@ -1,0 +1,77 @@
+{
+    "name": "tinigin/laravel-etag",
+    "description": "Setting the ETag header and 304 Not Modified response code if the page hasn't changed since the last visit",
+    "license": "MIT",
+    "keywords": [
+        "304 Not Modified",
+        "ETag",
+        "If-None-Match",
+        "Laravel ETag",
+        "Laravel 304"
+    ],
+    "authors": [
+        {
+            "name": "Dmitrii Tinigin",
+            "email": "tinigin@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/tinigin/laravel-etag",
+    "version": "1.0.0",
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^11.0 || ^12.0 || ^13.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "nunomaduro/collision": "^8.0",
+        "larastan/larastan": "^2.9 || ^3.0",
+        "orchestra/testbench": "^9.0 || ^10.0 || ^11.0",
+        "phpunit/phpunit": "^10.0 || ^11.0 || ^12.0 || ^13.0"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Tinigin\\ETag\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tinigin\\ETag\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "LastModified": "Tinigin\\ETag\\Facades\\ETag"
+            },
+            "providers": [
+                "ETagServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "phpcsf": "vendor/bin/php-cs-fixer fix --diff",
+        "phpstan:generate-baseline": "vendor/bin/phpstan --generate-baseline --memory-limit 512M",
+        "test:all": [
+            "@test:phpcsf",
+            "@test:phpstan",
+            "@test:phpunit"
+        ],
+        "test:phpcsf": "vendor/bin/php-cs-fixer fix --dry-run",
+        "test:phpstan": "vendor/bin/phpstan analyse",
+        "test:phpunit": "vendor/bin/phpunit --colors=always"
+    },
+    "scripts-descriptions": {
+        "phpcsf": "Run PHP-CS-Fixer fix",
+        "phpstan:generate-baseline": "Generate baseline for PHPStan",
+        "test:all": "Run all code analysis and tests",
+        "test:phpcsf": "Run PHP-CS-Fixer test",
+        "test:phpstan": "Run PHPStan",
+        "test:phpunit": "Run PHPUnit"
+    }
+}
