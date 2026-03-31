@@ -50,7 +50,7 @@
                 "ETag": "Tinigin\\ETag\\Facades\\ETag"
             },
             "providers": [
-                "ETagServiceProvider"
+                "Tinigin\\ETagServiceProvider"
             ]
         }
     },
