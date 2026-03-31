@@ -47,7 +47,7 @@
     "extra": {
         "laravel": {
             "aliases": {
-                "LastModified": "Tinigin\\ETag\\Facades\\ETag"
+                "ETag": "Tinigin\\ETag\\Facades\\ETag"
             },
             "providers": [
                 "ETagServiceProvider"
