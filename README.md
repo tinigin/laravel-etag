@@ -1,50 +1,50 @@
 <!--suppress HtmlDeprecatedAttribute -->
 
-# Last-Modified / 304 Not Modified Handler for Laravel
+# ETag / 304 Not Modified Handler for Laravel
 
-Easily setting the `Last-Modified` header and `304 Not Modified` response code.
+Easily setting the `ETag` header and `304 Not Modified` response code.
 
 <p style="text-align: center;" align="center">
 
-<a href="https://packagist.org/packages/abordage/laravel-last-modified" title="Packagist version">
-    <img alt="Packagist Version" src="https://img.shields.io/packagist/v/abordage/laravel-last-modified">
+<a href="https://packagist.org/packages/tinigin/laravel-etag" title="Packagist version">
+    <img alt="Packagist Version" src="https://img.shields.io/packagist/v/tinigin/laravel-etag">
 </a>
 
-<a href="https://github.com/abordage/laravel-last-modified/actions/workflows/tests.yml" title="GitHub Tests Status">
-    <img alt="GitHub Tests Status" src="https://img.shields.io/github/actions/workflow/status/abordage/laravel-last-modified/tests.yml?label=tests">
+<a href="https://github.com/tinigin/laravel-etag/actions/workflows/tests.yml" title="GitHub Tests Status">
+    <img alt="GitHub Tests Status" src="https://img.shields.io/github/actions/workflow/status/tinigin/laravel-etag/tests.yml?label=tests">
 </a>
 
-<a href="https://github.com/abordage/laravel-last-modified/actions/workflows/php-cs-fixer.yml" title="GitHub Code Style Status">
-    <img alt="GitHub Code Style Status" src="https://img.shields.io/github/actions/workflow/status/abordage/laravel-last-modified/php-cs-fixer.yml?label=code%20style">
+<a href="https://github.com/tinigin/laravel-etag/actions/workflows/php-cs-fixer.yml" title="GitHub Code Style Status">
+    <img alt="GitHub Code Style Status" src="https://img.shields.io/github/actions/workflow/status/tinigin/laravel-etag/php-cs-fixer.yml?label=code%20style">
 </a>
 
 <a href="https://www.php.net/" title="PHP version">
-    <img alt="PHP Version Support" src="https://img.shields.io/packagist/php-v/abordage/laravel-last-modified">
+    <img alt="PHP Version Support" src="https://img.shields.io/packagist/php-v/tinigin/laravel-etag">
 </a>
 
-<a href="https://github.com/abordage/laravel-last-modified/blob/master/LICENSE.md" title="License">
-    <img alt="License" src="https://img.shields.io/github/license/abordage/laravel-last-modified">
+<a href="https://github.com/tinigin/laravel-etag/blob/master/LICENSE.md" title="License">
+    <img alt="License" src="https://img.shields.io/github/license/tinigin/laravel-etag">
 </a>
 
 </p>
 
 
 ## Requirements
-- PHP 8.2+
-- Laravel 11.x / 12.x
+- PHP 8.3+
+- Laravel 11.x / 12.x / 13.x
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require abordage/laravel-last-modified
+composer require tinigin/laravel-etag
 ```
 
 Optionally, you can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="last-modified-config"
+php artisan vendor:publish --tag="etag-config"
 ```
 ## Usage
 The setup is very simple and consists of two steps:
